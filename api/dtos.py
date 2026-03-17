@@ -1,4 +1,4 @@
-from pydantic import BaseModel
+from pydantic import BaseModel 
 
 
 class user(BaseModel):
@@ -7,7 +7,10 @@ class user(BaseModel):
     email : str
     password : str
     phone : str
-   
+    status: str
+    created_by : int
+    updated_by : int
+
     
 
 class user_login(BaseModel):

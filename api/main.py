@@ -43,7 +43,7 @@ def verify_password(plain_password, hashed_password):
 def usre_login(body: user_login, db:Session = Depends(get_db)):
     user = db.query(User).filter(User.email == body.email ).first()
     if not user:
-        return {"msg":"Invalied gmail..."}
+        return {"msg":"Invalied mail id..."}
     if not verify_password(body.password, user.password):
         return {"masg":"Invalied Password..."}
 
